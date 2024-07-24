@@ -41,3 +41,16 @@ console.log(createHelloWorld()); // Output: "Hello World"
     }
     const f = createFunction();
     console.log(f(5, 5));
+
+
+    //*Closures --> when a function is created, it has access to a reference to all the variables declared around it, also known as it's lexical environment. The combination of the funciton and its environment is caled a closure. 
+    console.log("\nThis is a Closure. Variable 'a' is passed into the first function and then variable 'b' is passed into the second function that is within the main funciton. Closure allows both variables to be used.")
+    function createAdder(a) {
+        function f(b) {
+            const sum = a + b;
+            return sum;
+        }
+        return f;
+    }
+    const func = createAdder(9);
+    console.log(func(5)); //Output: 14
