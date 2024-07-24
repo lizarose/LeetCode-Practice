@@ -11,6 +11,21 @@ console.log(createHelloWorld()); // Output: "Hello World"
 //* Solution Notes:
     //* You can declare a function with two main ways: using the 'function' keyword or using arrow syntax.
 
+
+    //*Arrow Syntax --> using the arrow function => instead of 'function' keyword
+    console.log("\nThis is an Arrow Function.")
+    const newFunc = (a, b) => {
+        const sum = a + b;
+        return sum;
+    };
+    console.log(newFunc(8, 8)); //Output: 16
+    //* (a , b) are the arguments being passed in and the logic in the body returns a result which can have a value or be undefined.
+    //* You can also write simple arrow functions in one line where you can omit the 'return' keyword:
+    console.log("This Arrow Function is written in one line and has no 'return' keyword.")
+    const omit = (a, b) => a + b;
+    console.log(omit(2, 3)); //Output: 5
+
+
     //* Anonymous Function --> exclude the name of the function after the function keyword 
     console.log("\nThis is the result of an Anonymous Function: \n 3 + 4 = ? ....")
     let add = function(a, b) {
