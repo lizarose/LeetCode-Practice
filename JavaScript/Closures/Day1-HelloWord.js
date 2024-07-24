@@ -29,4 +29,15 @@ console.log(createHelloWorld()); // Output: "Hello World"
     console.log(result); //Output: 8
     //* You write code like this to encapsulate a variable within a new scope. For example, another dev can immediately see the 'sum' can not be used anywhere outside the function body.
 
-    
+
+    //* Functions Within Functions --> creating functions within other functions
+    console.log("\nThis is a function inside of a function.")
+    function createFunction() {
+        function add(a, b) {
+            const sum = a + b;
+            return sum;
+        }
+        return add;
+    }
+    const f = createFunction();
+    console.log(f(5, 5));
