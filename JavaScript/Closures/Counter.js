@@ -1,5 +1,5 @@
 //TODO: Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
-
+console.log("This is part 1: ")
 function createCounter(n) {
     let count = n;
     return function() {
@@ -25,3 +25,37 @@ console.log(counter()); // Output: 12
     //* Another difference is how the functions are stored in memory. If you create many instances of a class, each instance stores a single reference to the prototype object where all the methods are stored. Whereas for closures, all the "methods" are generated and a "copy" of each is stored in memory each time the outer function is called. For this reason, classes can be more efficient, particularly in the case where there are many methods.
 
     //* Unlike in languages like Java, you will tend to see code written with functions rather than with classes. But since JavaScript is a multi-paradigm language, it will depend on the particular project you are working on.
+
+
+
+//TODO: Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+
+    //The three functions are:
+
+        //increment() increases the current value by 1 and then returns it.
+        //decrement() reduces the current value by 1 and then returns it.
+        //reset() sets the current value to init and then returns it.
+console.log("This is part 2: ")
+var createCounter = function(init) {
+    let count = init;
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+        decrement: function() {
+            count--;
+            return count;
+        },
+        reset: function() {
+            count = init;
+            return count;
+        }
+    };
+    
+};
+const counts = createCounter(5);
+console.log(counts.increment()); // 6
+console.log(counts.reset());     // 5
+console.log(counts.decrement()); // 4
