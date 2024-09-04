@@ -13,3 +13,14 @@ function reverseSentence(sentence) {
 }
 
 reverseSentence(sentence)
+
+
+
+//reverse a string
+let string = "hello"
+console.log(string)
+
+function reverse(string) {
+    return console.log(string.split('').reverse().join(''))
+}
+
